@@ -10,6 +10,9 @@ using System.Threading.Tasks;
 using Application.Features.ProgrammingLanguages.Rules;
 using FluentValidation;
 using Core.Application.Pipelines.Validation;
+using Application.Features.Technologies.Rules;
+using Core.Security.JWT;
+using Application.Features.Users.Rules;
 
 namespace Application
 {
@@ -22,6 +25,10 @@ namespace Application
             services.AddMediatR(Assembly.GetExecutingAssembly());
 
             services.AddScoped<ProgrammingLanguageBusinessRules>();
+            services.AddScoped<TechnologyBusinessRules>();
+            services.AddScoped<UserBusinessRules>();
+
+            services.AddScoped<ITokenHelper, JwtHelper>();
 
             services.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly());
             //services.AddTransient(typeof(IPipelineBehavior<,>), typeof(AuthorizationBehavior<,>));

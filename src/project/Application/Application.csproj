@@ -14,6 +14,11 @@
 
 	<ItemGroup>
 		<Folder Include="Features\ProgrammingLanguages\Constants\" />
+		<Folder Include="Features\Technologies\Constants\" />
+		<Folder Include="Features\UserGithubs\Constants\" />
+		<Folder Include="Features\UserGithubs\Models\" />
+		<Folder Include="Features\UserGithubs\Rules\" />
+		<Folder Include="Features\UserGithubs\Queries\" />
 	</ItemGroup>
 
 	<ItemGroup>
